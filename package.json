@@ -1,0 +1,18 @@
+{
+    "name": "bb100",
+    "version": "1.0.0",
+    "scripts": {
+      "start": "npm run start:backend",
+      "start:backend": "node backend-banking-app/src/index.js",
+      "heroku-postbuild": "npm run build:frontend",
+      "build:frontend": "cd frontend-banking-app && npm install && npm run build && cp -r build/* ../backend-banking-app/public/"
+    },
+    "dependencies": {
+      "serve": "^12.0.0"
+    },
+    "engines": {
+      "node": "14.x",
+      "npm": "6.x"
+    }
+  }
+  
